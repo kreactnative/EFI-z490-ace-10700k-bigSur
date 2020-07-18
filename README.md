@@ -6,3 +6,11 @@ diskutil unmountDisk /dev/diskX
 Restore from diskX to diskX
 sudo dd if=/dev/diskX of=/dev/diskX bs=32m
 ```
+
+
+resize hdd
+```
+diskutil list
+sudo diskutil repairDisk diskX
+sudo diskutil apfs resizeContainer diskXs2 0
+```
